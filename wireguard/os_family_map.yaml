@@ -10,4 +10,14 @@
 # you will need to provide at least an empty dict in this file, e.g.
 # osfamilymap: {}
 ---
-default: {}
+
+Debian:
+  packages:
+    - wireguard
+  repository:
+    name: deb http://deb.debian.org/debian buster-backports main
+    file: /etc/apt/sources.list.d/buster-backports.list
+  
+default:
+  packages:
+    - wireguard

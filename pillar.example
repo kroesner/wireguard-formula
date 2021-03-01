@@ -28,13 +28,15 @@ wireguard:
         # resulting in defaulting to auto.
         Table: 'off'
       peers:
-        - PublicKey: foobar
+        peer1:
+          PublicKey: foobar
           # AllowedIPs must be a list of strings or a comma separated string
           AllowedIPs:
             - fe80::2
             - 10.0.0.2/32
           PresharedKey: secret1
-        - Publickey: bazbar
+        peer2:
+          Publickey: bazbar
           AllowedIPs:
             - fe80::3
             - 10.0.0.3/32

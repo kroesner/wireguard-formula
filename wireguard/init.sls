@@ -60,7 +60,7 @@ wireguard_interface_{{interface_name}}_config:
     - template: jinja
     - context:
       interface: {{interface_dict.get('config', {})}}
-      peers: {{interface_dict.get('peers', [])}}
+      peers: {{interface_dict.get('peers', {})}}
     - mode: 600
     {% endif %}
 
